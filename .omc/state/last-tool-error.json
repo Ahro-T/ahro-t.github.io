@@ -1,7 +1,0 @@
-{
-  "tool_name": "Bash",
-  "tool_input_preview": "{\"command\":\"~/.local/bin/hugo --minify 2>&1\",\"description\":\"Test Hugo build\"}",
-  "error": "Exit code 1\nERROR deprecated: site config key paginate was deprecated in Hugo v0.128.0 and subsequently removed. Use pagination.pagerSize instead.\nWARN  Module \"PaperMod\" is not compatible with this Hugo version: Min 0.146.0; run \"hugo mod graph\" for more information.\nStart building sites … \nhugo v0.145.0-666444f0a52132f9fec9f71cf25b441cc6a4f355+extended linux/amd64 BuildDate=2025-02-26T15:41:25Z VendorInfo=gohugoio\n\nERROR => hugo v0.146.0 or greater is required for hugo-PaperMod to build\nERROR ...",
-  "timestamp": "2026-03-28T11:29:39.083Z",
-  "retry_count": 1
-}
