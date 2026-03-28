@@ -1,5 +1,5 @@
-colorScheme = "blowfish"
-defaultAppearance = "light"
+colorScheme = "noir"
+defaultAppearance = "dark"
 autoSwitchAppearance = true
 
 enableSearch = true
@@ -13,7 +13,7 @@ disableTextInHeader = false
 fingerprintAlgorithm = "sha512"
 
 [header]
-  layout = "basic"
+  layout = "fixed"
 
 [footer]
   showMenu = false
@@ -23,12 +23,14 @@ fingerprintAlgorithm = "sha512"
   showScrollToTop = true
 
 [homepage]
-  layout = "profile"
+  layout = "hero"
+  homepageImage = ""
   showRecent = true
-  showRecentItems = 5
+  showRecentItems = 6
   showMoreLink = true
   showMoreLinkDest = "/posts/"
-  cardView = false
+  cardView = true
+  cardViewScreenWidth = false
 
 [article]
   showDate = true
@@ -41,7 +43,9 @@ fingerprintAlgorithm = "sha512"
   showReadingTime = true
   showTableOfContents = true
   showTaxonomies = true
-  showWordCount = true
+  showWordCount = false
+  showRelatedContent = true
+  relatedContentLimit = 3
   math = true
 
 [list]
@@ -49,12 +53,15 @@ fingerprintAlgorithm = "sha512"
   showSummary = true
   showTableOfContents = false
   groupByYear = true
+  cardView = true
 
 [taxonomy]
   showTermCount = true
   showBreadcrumbs = false
+  cardView = true
 
 [term]
   showBreadcrumbs = false
   showTableOfContents = true
   groupByYear = false
+  cardView = true
