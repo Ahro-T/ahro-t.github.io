@@ -1,0 +1,40 @@
+baseURL = "https://ahro-t.github.io/"
+languageCode = "ko"
+defaultContentLanguage = "ko"
+title = "Ahro's Blog"
+theme = "PaperMod"
+[pagination]
+  pagerSize = 10
+
+[params]
+  env = "production"
+  description = "생각을 구조화하는 블로그"
+  author = "Ahro"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+  TocOpen = false
+  defaultTheme = "auto"
+  disableSpecial1stPost = true
+
+[params.homeInfoParams]
+  Title = "Ahro's Blog"
+  Content = "생각을 구조화합니다."
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/Ahro-T"
+
+[markup]
+  [markup.highlight]
+    style = "monokai"
+    lineNos = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
