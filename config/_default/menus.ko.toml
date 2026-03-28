@@ -1,0 +1,19 @@
+[[main]]
+  name = "홈"
+  url = "/"
+  weight = 1
+
+[[main]]
+  name = "아카이브"
+  pageRef = "archives"
+  weight = 2
+
+[[main]]
+  name = "카테고리"
+  pageRef = "categories"
+  weight = 3
+
+[[main]]
+  name = "소개"
+  pageRef = "about"
+  weight = 4
