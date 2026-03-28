@@ -1,6 +1,6 @@
 ---
 title: "수학 실력 공식"
-date: 2026-03-28T13:00:00
+date: 2026-03-28
 draft: false
 categories: ["교육"]
 tags: ["수학", "교육", "수학실력공식"]
