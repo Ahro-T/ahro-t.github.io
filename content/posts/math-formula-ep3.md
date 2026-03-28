@@ -2,6 +2,7 @@
 title: "수학 실력 공식"
 date: 2026-03-28T13:00:00
 draft: false
+categories: ["교육"]
 tags: ["수학", "교육", "수학실력공식"]
 series: ["수학 실력 공식"]
 description: "다섯 가지 톱니바퀴의 관계를 하나의 공식으로 정리합니다."

@@ -3,13 +3,20 @@ languageCode = "ko"
 defaultContentLanguage = "ko"
 title = "Ahro's Blog"
 theme = "PaperMod"
+
 [pagination]
   pagerSize = 10
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"
 
 [params]
   env = "production"
   description = "생각을 구조화하는 블로그"
   author = "Ahro"
+  mainSections = ["posts"]
   ShowReadingTime = true
   ShowShareButtons = false
   ShowPostNavLinks = true
@@ -28,6 +35,31 @@ theme = "PaperMod"
   name = "github"
   url = "https://github.com/Ahro-T"
 
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "Archive"
+  url = "/archives/"
+  weight = 2
+
+[[menu.main]]
+  name = "Search"
+  url = "/search/"
+  weight = 3
+
+[[menu.main]]
+  name = "Categories"
+  url = "/categories/"
+  weight = 4
+
+[[menu.main]]
+  name = "About"
+  url = "/about/"
+  weight = 5
+
 [markup]
   [markup.highlight]
     style = "monokai"
@@ -35,6 +67,11 @@ theme = "PaperMod"
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+    [markup.goldmark.extensions.passthrough]
+      enable = true
+    [markup.goldmark.extensions.passthrough.delimiters]
+      block = [["$$", "$$"], ["\\[", "\\]"]]
+      inline = [["$", "$"], ["\\(", "\\)"]]
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
