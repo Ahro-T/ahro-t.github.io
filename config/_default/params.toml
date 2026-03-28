@@ -23,7 +23,7 @@ fingerprintAlgorithm = "sha512"
   showScrollToTop = true
 
 [homepage]
-  layout = "hero"
+  layout = "profile"
   homepageImage = ""
   showRecent = true
   showRecentItems = 6
