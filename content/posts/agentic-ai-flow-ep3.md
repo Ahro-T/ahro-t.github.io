@@ -1,5 +1,5 @@
 ---
-title: "Memory와 LLMWiki — 시스템은 어떻게 기억하고, 왜 Ontology가 나중에 필요한가"
+title: "3. Memory와 LLMWiki — 시스템은 어떻게 기억하고, 왜 Ontology가 나중에 필요한가"
 date: 2026-04-26
 draft: false
 categories: ["AI"]

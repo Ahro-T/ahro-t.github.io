@@ -1,5 +1,5 @@
 ---
-title: "Evaluator, Verifier, Self-Improvement — 시스템은 어떻게 자기 실수를 줄여가는가"
+title: "4. Evaluator, Verifier, Self-Improvement — 시스템은 어떻게 자기 실수를 줄여가는가"
 date: 2026-04-26
 draft: false
 categories: ["AI"]

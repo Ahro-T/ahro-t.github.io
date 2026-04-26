@@ -1,5 +1,5 @@
 ---
-title: "Harness와 Runtime — 에이전트는 어디서, 어떻게 굴러가는가"
+title: "2. Harness와 Runtime — 에이전트는 어디서, 어떻게 굴러가는가"
 date: 2026-04-26
 draft: false
 categories: ["AI"]

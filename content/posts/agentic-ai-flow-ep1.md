@@ -1,5 +1,5 @@
 ---
-title: "LLM에서 Agent로 — 왜 챗봇만으로는 시스템이 되지 않는가"
+title: "1. LLM에서 Agent로 — 왜 챗봇만으로는 시스템이 되지 않는가"
 date: 2026-04-26
 draft: false
 categories: ["AI"]

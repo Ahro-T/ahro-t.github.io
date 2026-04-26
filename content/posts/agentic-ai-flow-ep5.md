@@ -1,5 +1,5 @@
 ---
-title: "가재(Gajae)로 보는 Resident Agent — 앞의 모든 층이 하나의 시스템이 되는 순간"
+title: "5. 가재(Gajae)로 보는 Resident Agent — 앞의 모든 층이 하나의 시스템이 되는 순간"
 date: 2026-04-26
 draft: false
 categories: ["AI"]
