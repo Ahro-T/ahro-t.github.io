@@ -8,6 +8,14 @@ series: ["에이전트 시스템 입문"]
 description: "Gajae는 단일 봇이 아니라 ingress부터 verification까지 닫힌 resident-agent system의 사례다."
 ---
 
+## 이 시리즈 읽는 순서
+
+1. [LLM에서 Agent로](/posts/agentic-ai-flow-ep1/)
+2. [Harness와 Runtime](/posts/agentic-ai-flow-ep2/)
+3. [Memory와 LLMWiki](/posts/agentic-ai-flow-ep3/)
+4. [Evaluator, Verifier, Self-Improvement](/posts/agentic-ai-flow-ep4/)
+5. **현재 글** — 가재(Gajae)로 보는 Resident Agent
+
 [이전 글](/posts/agentic-ai-flow-ep4/)까지 오면서 우리는 조각들을 하나씩 봤습니다.
 
 - LLM
@@ -343,3 +351,9 @@ ingress는:
 - self-improvement는 이 모든 것을 하나의 폐루프로 닫는다
 
 즉 agent system의 핵심은 "더 똑똑한 답변"보다 **더 잘 닫히는 운영 구조**에 있습니다.
+
+---
+
+## 이전 글
+
+- ← [Evaluator, Verifier, Self-Improvement — 시스템은 어떻게 자기 실수를 줄여가는가](/posts/agentic-ai-flow-ep4/)

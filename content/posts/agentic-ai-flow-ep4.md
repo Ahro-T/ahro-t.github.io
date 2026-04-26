@@ -8,6 +8,14 @@ series: ["에이전트 시스템 입문"]
 description: "좋은 agent system은 더 많이 생성하는 시스템이 아니라, 더 잘 검증하고 반영하는 시스템이다."
 ---
 
+## 이 시리즈 읽는 순서
+
+1. [LLM에서 Agent로](/posts/agentic-ai-flow-ep1/)
+2. [Harness와 Runtime](/posts/agentic-ai-flow-ep2/)
+3. [Memory와 LLMWiki](/posts/agentic-ai-flow-ep3/)
+4. **현재 글** — Evaluator, Verifier, Self-Improvement
+5. [가재(Gajae)로 보는 Resident Agent](/posts/agentic-ai-flow-ep5/)
+
 [이전 글](/posts/agentic-ai-flow-ep3/)에서는 **memory**, **llmwiki**, **ontology**를 봤습니다.
 
 거기서 잡은 핵심은 이랬습니다.
@@ -270,3 +278,10 @@ LLM이 강력해질수록 사람들은 종종 생성에만 시선을 빼앗깁�
 을 다룹니다.
 
 지금까지 본 LLM, agent, harness, runtime, memory, verifier가 실제 topology 안에서 어떻게 하나의 resident system으로 묶이는지 살펴보겠습니다.
+
+---
+
+## 이전 / 다음 글
+
+- ← [Memory와 LLMWiki — 시스템은 어떻게 기억하고, 왜 Ontology가 나중에 필요한가](/posts/agentic-ai-flow-ep3/)
+- → [가재(Gajae)로 보는 Resident Agent — 앞의 모든 층이 하나의 시스템이 되는 순간](/posts/agentic-ai-flow-ep5/)

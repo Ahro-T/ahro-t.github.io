@@ -8,6 +8,14 @@ series: ["에이전트 시스템 입문"]
 description: "LLM은 생성 엔진이고, agent는 그 엔진을 써서 목표를 향해 움직이는 주체다."
 ---
 
+## 이 시리즈 읽는 순서
+
+1. **현재 글** — LLM에서 Agent로
+2. [Harness와 Runtime](/posts/agentic-ai-flow-ep2/)
+3. [Memory와 LLMWiki](/posts/agentic-ai-flow-ep3/)
+4. [Evaluator, Verifier, Self-Improvement](/posts/agentic-ai-flow-ep4/)
+5. [가재(Gajae)로 보는 Resident Agent](/posts/agentic-ai-flow-ep5/)
+
 요즘 AI를 이야기할 때 "LLM", "에이전트", "에이전트 시스템" 같은 말이 자주 한꺼번에 나옵니다.
 
 근데 처음 들으면 다 비슷하게 들립니다.
@@ -297,3 +305,9 @@ LLM과 agent의 차이를 이해했다면, 이제 정말 중요한 질문은 이
 > agent는 실제로 어떤 운영 구조 안에서 돌아가는가?
 
 그게 보이기 시작하면, 에이전트 시스템은 더 이상 추상적인 유행어가 아니라 **그릴 수 있는 구조**가 됩니다.
+
+---
+
+## 다음 글
+
+- → [Harness와 Runtime — 에이전트는 어디서, 어떻게 굴러가는가](/posts/agentic-ai-flow-ep2/)

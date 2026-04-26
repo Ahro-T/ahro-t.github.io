@@ -8,6 +8,14 @@ series: ["에이전트 시스템 입문"]
 description: "agent만으로는 시스템이 되지 않는다. harness는 일을 조직하고 runtime은 그 일이 실제로 살아서 이어지게 만든다."
 ---
 
+## 이 시리즈 읽는 순서
+
+1. [LLM에서 Agent로](/posts/agentic-ai-flow-ep1/)
+2. **현재 글** — Harness와 Runtime
+3. [Memory와 LLMWiki](/posts/agentic-ai-flow-ep3/)
+4. [Evaluator, Verifier, Self-Improvement](/posts/agentic-ai-flow-ep4/)
+5. [가재(Gajae)로 보는 Resident Agent](/posts/agentic-ai-flow-ep5/)
+
 [이전 글](/posts/agentic-ai-flow-ep1/)에서는 **LLM**과 **agent**의 차이를 먼저 잡았습니다.
 
 간단히 말하면 이랬습니다.
@@ -326,3 +334,10 @@ Harness가 **운영 논리**라면, runtime은 **운영 현장**에 가깝습니
 를 다룹니다.
 
 지금까지는 agent가 **어떻게 굴러가는가**를 봤다면, 다음부터는 agent가 **어떻게 잊지 않고 이어지는가**를 보게 됩니다.
+
+---
+
+## 이전 / 다음 글
+
+- ← [LLM에서 Agent로 — 왜 챗봇만으로는 시스템이 되지 않는가](/posts/agentic-ai-flow-ep1/)
+- → [Memory와 LLMWiki — 시스템은 어떻게 기억하고, 왜 Ontology가 나중에 필요한가](/posts/agentic-ai-flow-ep3/)

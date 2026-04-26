@@ -8,6 +8,14 @@ series: ["에이전트 시스템 입문"]
 description: "좋은 시스템은 먼저 연속성을 확보하고, 그다음에 구조화를 한다. memory first, ontology second."
 ---
 
+## 이 시리즈 읽는 순서
+
+1. [LLM에서 Agent로](/posts/agentic-ai-flow-ep1/)
+2. [Harness와 Runtime](/posts/agentic-ai-flow-ep2/)
+3. **현재 글** — Memory와 LLMWiki
+4. [Evaluator, Verifier, Self-Improvement](/posts/agentic-ai-flow-ep4/)
+5. [가재(Gajae)로 보는 Resident Agent](/posts/agentic-ai-flow-ep5/)
+
 [이전 글](/posts/agentic-ai-flow-ep2/)에서는 **harness**와 **runtime**을 봤습니다.
 
 거기서 나온 핵심은 이랬습니다.
@@ -306,3 +314,10 @@ ontology는 먼저 쌓인 기억과 지식을 **정리하고 안정화**하는 �
 를 다룹니다.
 
 기억과 구조가 쌓인다고 시스템이 저절로 좋아지지는 않습니다. 그걸 진짜 개선으로 바꾸는 건 결국 **검증 루프**입니다.
+
+---
+
+## 이전 / 다음 글
+
+- ← [Harness와 Runtime — 에이전트는 어디서, 어떻게 굴러가는가](/posts/agentic-ai-flow-ep2/)
+- → [Evaluator, Verifier, Self-Improvement — 시스템은 어떻게 자기 실수를 줄여가는가](/posts/agentic-ai-flow-ep4/)
