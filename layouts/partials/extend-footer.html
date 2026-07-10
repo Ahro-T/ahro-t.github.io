@@ -1,9 +1,95 @@
 <script>
-  window.addEventListener("load", () => {
-    document.querySelectorAll(".copy-button").forEach((button) => {
-      button.setAttribute("type", "button");
-      button.setAttribute("aria-label", "코드 복사");
-      button.setAttribute("aria-live", "polite");
-    });
-  });
+  (() => {
+    const initEnhancements = () => {
+      document.querySelectorAll(".copy-button").forEach((button) => {
+        button.setAttribute("type", "button");
+        button.setAttribute("aria-label", "코드 복사");
+        button.setAttribute("aria-live", "polite");
+      });
+
+      const tocNodes = document.querySelectorAll("#TableOfContents");
+      tocNodes.forEach((toc, index) => {
+        if (index > 0) toc.id = `TableOfContents-${index + 1}`;
+      });
+
+      const currentPath = window.location.pathname;
+      const menuLinks = [...document.querySelectorAll(".main-menu a[href]")]
+        .filter((link) => {
+          const path = new URL(link.href, window.location.origin).pathname;
+          return path === currentPath || (path !== "/" && currentPath.startsWith(path));
+        })
+        .sort((a, b) => b.pathname.length - a.pathname.length);
+
+      if (menuLinks[0]) {
+        const activePath = new URL(menuLinks[0].href, window.location.origin).pathname;
+        menuLinks
+          .filter((link) => new URL(link.href, window.location.origin).pathname === activePath)
+          .forEach((link) => {
+            link.setAttribute("aria-current", "page");
+            link.classList.add("is-current");
+          });
+      }
+
+      const menuToggle = document.getElementById("mobile-menu-toggle");
+      const menuOpen = document.querySelector('label[for="mobile-menu-toggle"]');
+      const menuDialog = menuToggle?.nextElementSibling?.nextElementSibling;
+
+      if (menuToggle && menuOpen) {
+        menuOpen.setAttribute("role", "button");
+        menuOpen.setAttribute("tabindex", "0");
+        menuOpen.setAttribute("aria-expanded", String(menuToggle.checked));
+
+        if (menuDialog) {
+          menuDialog.id = "mobile-navigation";
+          menuDialog.setAttribute("aria-label", "주 메뉴");
+          menuOpen.setAttribute("aria-controls", menuDialog.id);
+        }
+
+        menuOpen.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            menuToggle.checked = !menuToggle.checked;
+            menuToggle.dispatchEvent(new Event("change"));
+          }
+        });
+
+        menuToggle.addEventListener("change", () => {
+          menuOpen.setAttribute("aria-expanded", String(menuToggle.checked));
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && menuToggle.checked) {
+            menuToggle.checked = false;
+            menuToggle.dispatchEvent(new Event("change"));
+            menuOpen.focus();
+          }
+        });
+      }
+
+      const article = document.querySelector(".article-content");
+      if (article) {
+        const progress = document.createElement("div");
+        progress.id = "reading-progress";
+        progress.setAttribute("aria-hidden", "true");
+        document.body.append(progress);
+
+        const updateProgress = () => {
+          const start = article.offsetTop;
+          const distance = Math.max(article.offsetHeight - window.innerHeight, 1);
+          const value = Math.min(Math.max((window.scrollY - start) / distance, 0), 1);
+          progress.style.transform = `scaleX(${value})`;
+        };
+
+        window.addEventListener("scroll", updateProgress, { passive: true });
+        window.addEventListener("resize", updateProgress, { passive: true });
+        updateProgress();
+      }
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initEnhancements, { once: true });
+    } else {
+      initEnhancements();
+    }
+  })();
 </script>

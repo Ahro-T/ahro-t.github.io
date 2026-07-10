@@ -1,0 +1,10 @@
+<div
+  class="table-scroll"
+  tabindex="0"
+  role="region"
+  aria-label="{{ .Page.Title }}의 표">
+  <table{{ range $key, $value := .Attributes }} {{ printf "%s=%q" $key $value | safeHTMLAttr }}{{ end }}>
+    <thead>{{ .THead }}</thead>
+    <tbody>{{ .TBody }}</tbody>
+  </table>
+</div>

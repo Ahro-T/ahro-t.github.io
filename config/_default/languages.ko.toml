@@ -14,6 +14,7 @@ title = "Ahro's Blog"
   [params.author]
     name = "Ahro"
     image = "img/panda.png"
+    headline = "복잡한 개념을 명료한 구조로 바꿉니다."
     bio = "생각을 구조화합니다. 수학, CS, AI, 교육에 대해 씁니다."
     links = [
       { github = "https://github.com/Ahro-T" },

@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "소개"
 layout: "simple"
 ---
 

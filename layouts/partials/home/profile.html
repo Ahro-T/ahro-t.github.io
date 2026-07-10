@@ -1,0 +1,81 @@
+{{ $disableImageOptimization := .Site.Params.disableImageOptimization | default false }}
+{{ $avatarURL := "" }}
+{{ with .Site.Params.Author.image }}
+  {{ $avatar := resources.Get . }}
+  {{ with $avatar }}
+    {{ if not (or $disableImageOptimization (eq .MediaType.SubType "svg")) }}
+      {{ $avatar = .Fill "360x360 q92" }}
+    {{ end }}
+    {{ $avatarURL = $avatar.RelPermalink }}
+  {{ end }}
+{{ end }}
+
+<section class="home-hero" aria-labelledby="home-hero-title">
+  <div class="home-hero__copy">
+    <p class="home-eyebrow">AHRO · KNOWLEDGE NOTES</p>
+    <h1 id="home-hero-title">복잡한 개념을<br><span>명료한 구조로.</span></h1>
+    <p class="home-hero__lead">
+      수학, 컴퓨터과학, AI, 교육을 원리부터 차근히 설명합니다.
+      읽고 나면 직접 써먹을 수 있는 지식을 만듭니다.
+    </p>
+    <nav class="home-actions" aria-label="추천 콘텐츠">
+      <a class="home-action home-action--primary" href="{{ "/kubernetes/" | relLangURL }}">
+        쿠버네티스 강의 보기 <span aria-hidden="true">→</span>
+      </a>
+      <a class="home-action" href="{{ "/posts/" | relLangURL }}">
+        모든 글 둘러보기
+      </a>
+    </nav>
+    <ul class="home-topics" aria-label="주요 주제">
+      <li>Math</li><li>CS</li><li>AI</li><li>Education</li>
+    </ul>
+  </div>
+
+  <aside class="home-hero__visual" aria-label="블로그 소개">
+    <div class="home-avatar-shell">
+      {{ with $avatarURL }}
+        <img
+          src="{{ . }}"
+          width="180"
+          height="180"
+          alt="{{ $.Site.Params.Author.name | default `Ahro` }}"
+          class="home-avatar nozoom">
+      {{ end }}
+    </div>
+    <p class="home-signature">{{ .Site.Params.Author.name | default .Site.Title }}</p>
+    <p class="home-role">Think · Build · Teach</p>
+    <nav class="home-social" aria-label="외부 프로필">
+      {{ partialCached "author-links.html" . }}
+    </nav>
+    <a class="home-now" href="{{ "/kubernetes/" | relLangURL }}">
+      <span class="home-now__dot" aria-hidden="true"></span>
+      <span><small>NOW PUBLISHING</small>Kubernetes Masterclass</span>
+      <span aria-hidden="true">↗</span>
+    </a>
+  </aside>
+</section>
+
+{{ with .Content }}
+  <section class="home-intro prose dark:prose-invert">{{ . }}</section>
+{{ end }}
+
+{{ if .Site.Params.homepage.showRecent | default false }}
+  {{ $recentLimit := .Site.Params.homepage.showRecentItems | default 6 }}
+  {{ $recentPosts := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+  <section class="home-feed" aria-labelledby="recent-posts-title">
+    <header class="home-section-heading">
+      <div>
+        <p>RECENT WRITING</p>
+        <h2 id="recent-posts-title">최근 글</h2>
+      </div>
+      <a href="{{ .Site.Params.homepage.showMoreLinkDest | default `/posts/` | relLangURL }}">
+        전체 글 <span aria-hidden="true">→</span>
+      </a>
+    </header>
+    <div class="home-card-grid">
+      {{ range first $recentLimit $recentPosts }}
+        {{ partial "article-link/card.html" . }}
+      {{ end }}
+    </div>
+  </section>
+{{ end }}

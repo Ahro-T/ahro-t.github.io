@@ -3,17 +3,18 @@
   {{ $enableToc := .Params.showTableOfContents | default false }}
   {{ $showToc := and $enableToc (in .TableOfContents "<ul") }}
 
-  <header>
+  <header class="course-page-header">
     {{ if .Params.showBreadcrumbs | default false }}
       {{ partial "breadcrumbs.html" . }}
     {{ end }}
+    <p class="course-page-label">AHRO COURSE</p>
     <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
   </header>
 
-  <section class="mt-12 prose flex max-w-full flex-col dark:prose-invert lg:flex-row mb-10">
+  <section class="course-landing-content prose flex max-w-full flex-col dark:prose-invert lg:flex-row mb-10">
     {{ if $showToc }}
       <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
-        <div class="toc ps-5 print:hidden lg:sticky lg:top-[140px]">
+        <div class="toc course-toc ps-5 print:hidden lg:sticky">
           {{ partial "toc.html" . }}
         </div>
       </div>
@@ -23,9 +24,9 @@
     </div>
   </section>
 
-  <section aria-label="전체 강의 목록" class="w-full grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  <ol aria-label="전체 강의 목록" class="course-grid w-full grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
     {{ range .RegularPages.ByWeight }}
-      {{ partial "article-link/card.html" . }}
+      <li class="course-grid__item">{{ partial "article-link/card.html" . }}</li>
     {{ end }}
-  </section>
+  </ol>
 {{ end }}

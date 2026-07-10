@@ -1,9 +1,11 @@
-colorScheme = "noir"
+colorScheme = "ocean"
 defaultAppearance = "dark"
 autoSwitchAppearance = true
 
 enableSearch = true
 enableCodeCopy = true
+highlightCurrentMenuArea = true
+smartTOC = true
 
 mainSections = ["posts"]
 
@@ -36,6 +38,7 @@ fingerprintAlgorithm = "sha512"
   showDate = true
   showDateUpdated = false
   showAuthor = true
+  showAuthorBottom = true
   showBreadcrumbs = true
   showDraftLabel = true
   showHeadingAnchors = true

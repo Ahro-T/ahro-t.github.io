@@ -13,7 +13,7 @@ cascade:
   showAuthor: false
   showBreadcrumbs: true
   showTableOfContents: true
-  showReadingTime: true
+  showReadingTime: false
   showRelatedContent: false
   showTaxonomies: false
   showPagination: false
@@ -29,23 +29,23 @@ cascade:
   </nav>
 </section>
 
-<div class="course-stats" aria-label="과정 요약">
-  <div class="course-stat"><strong>14강</strong><span>원리부터 운영까지</span></div>
-  <div class="course-stat"><strong>42.5시간</strong><span>개념 30% · 실습 70%</span></div>
-  <div class="course-stat"><strong>12개</strong><span>의도적 장애 실습</span></div>
-  <div class="course-stat"><strong>1개</strong><span>운영형 캡스톤</span></div>
-</div>
+<dl class="course-stats" aria-label="과정 요약">
+  <div class="course-stat"><dt>14강</dt><dd>원리부터 운영까지</dd></div>
+  <div class="course-stat"><dt>42.5시간</dt><dd>개념 30% · 실습 70%</dd></div>
+  <div class="course-stat"><dt>12개</dt><dd>의도적 장애 실습</dd></div>
+  <div class="course-stat"><dt>1개</dt><dd>운영형 캡스톤</dd></div>
+</dl>
 
 ## 이 강의의 방식
 
 정상 동작만 따라 치면 실무에서 멈춥니다. 모든 강의는 같은 네 단계로 진행합니다.
 
-<div class="course-principles">
-  <div class="course-principle"><strong>1. 감으로 이해하기</strong><span>YAML보다 먼저 “왜 이 객체가 필요한가”를 잡습니다.</span></div>
-  <div class="course-principle"><strong>2. 최소 구성 만들기</strong><span>가장 작은 manifest를 배포하고 실제 상태를 관찰합니다.</span></div>
-  <div class="course-principle"><strong>3. 일부러 망가뜨리기</strong><span>selector, image, probe, 권한을 틀려 장애를 재현합니다.</span></div>
-  <div class="course-principle"><strong>4. 증거로 복구하기</strong><span>Events·logs·metrics로 가설을 세우고 검증합니다.</span></div>
-</div>
+<ol class="course-principles">
+  <li class="course-principle"><strong>1. 감으로 이해하기</strong><span>YAML보다 먼저 “왜 이 객체가 필요한가”를 잡습니다.</span></li>
+  <li class="course-principle"><strong>2. 최소 구성 만들기</strong><span>가장 작은 manifest를 배포하고 실제 상태를 관찰합니다.</span></li>
+  <li class="course-principle"><strong>3. 일부러 망가뜨리기</strong><span>selector, image, probe, 권한을 틀려 장애를 재현합니다.</span></li>
+  <li class="course-principle"><strong>4. 증거로 복구하기</strong><span>Events·logs·metrics로 가설을 세우고 검증합니다.</span></li>
+</ol>
 
 ## 수강 전 준비
 

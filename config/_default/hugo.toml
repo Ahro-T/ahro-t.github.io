@@ -3,7 +3,7 @@ baseURL = "https://ahro-t.github.io/"
 defaultContentLanguage = "ko"
 
 enableRobotsTXT = true
-summaryLength = 0
+summaryLength = 32
 buildDrafts = false
 buildFuture = false
 enableEmoji = true
