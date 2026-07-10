@@ -6,6 +6,7 @@ categories: ["AI"]
 tags: ["AI", "LLM", "에이전트", "Agentic AI"]
 series: ["에이전트 시스템 입문"]
 description: "LLM은 생성 엔진이고, agent는 그 엔진을 써서 목표를 향해 움직이는 주체다."
+summary: "LLM은 생성 엔진이고, agent는 그 엔진을 써서 목표를 향해 움직이는 주체다."
 ---
 
 ## 이 시리즈 읽는 순서

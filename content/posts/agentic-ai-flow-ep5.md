@@ -6,6 +6,7 @@ categories: ["AI"]
 tags: ["AI", "가재", "Resident Agent", "Agentic AI", "에이전트"]
 series: ["에이전트 시스템 입문"]
 description: "Gajae는 단일 봇이 아니라 ingress부터 verification까지 닫힌 resident-agent system의 사례다."
+summary: "Gajae는 단일 봇이 아니라 ingress부터 verification까지 닫힌 resident-agent system의 사례다."
 ---
 
 ## 이 시리즈 읽는 순서

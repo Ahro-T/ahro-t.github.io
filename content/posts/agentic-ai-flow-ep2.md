@@ -6,6 +6,7 @@ categories: ["AI"]
 tags: ["AI", "에이전트", "하네스", "런타임", "Agentic AI"]
 series: ["에이전트 시스템 입문"]
 description: "agent만으로는 시스템이 되지 않는다. harness는 일을 조직하고 runtime은 그 일이 실제로 살아서 이어지게 만든다."
+summary: "agent만으로는 시스템이 되지 않는다. harness는 일을 조직하고 runtime은 그 일이 실제로 살아서 이어지게 만든다."
 ---
 
 ## 이 시리즈 읽는 순서

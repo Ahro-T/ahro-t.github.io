@@ -6,6 +6,7 @@ categories: ["AI"]
 tags: ["AI", "Evaluator", "Verifier", "자가개선", "에이전트"]
 series: ["에이전트 시스템 입문"]
 description: "좋은 agent system은 더 많이 생성하는 시스템이 아니라, 더 잘 검증하고 반영하는 시스템이다."
+summary: "좋은 agent system은 더 많이 생성하는 시스템이 아니라, 더 잘 검증하고 반영하는 시스템이다."
 ---
 
 ## 이 시리즈 읽는 순서

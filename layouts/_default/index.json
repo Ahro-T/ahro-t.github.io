@@ -1,0 +1,30 @@
+{{- $index := slice -}}
+{{- range .Site.RegularPages -}}
+  {{- if and (not .Params.excludeFromSearch) (or .Plain .Params.summary .Params.description) -}}
+    {{- $section := .CurrentSection.Title | default .Section -}}
+    {{- $summary := .Params.summary | default .Params.description | default .Summary -}}
+    {{- if .Date -}}
+      {{- $index = $index | append (dict
+        "date" (.Date | time.Format (.Site.Language.Params.dateFormat | default ":date_long"))
+        "title" (.Title | emojify | plainify | htmlUnescape | safeJS)
+        "section" ($section | emojify | plainify | htmlUnescape | safeJS)
+        "summary" ($summary | plainify | htmlUnescape | safeJS)
+        "content" (.Plain | safeJS)
+        "permalink" .RelPermalink
+        "externalUrl" .Params.externalUrl
+        "type" .Type
+      ) -}}
+    {{- else -}}
+      {{- $index = $index | append (dict
+        "title" (.Title | emojify | plainify | htmlUnescape | safeJS)
+        "section" ($section | emojify | plainify | htmlUnescape | safeJS)
+        "summary" ($summary | plainify | htmlUnescape | safeJS)
+        "content" (.Plain | safeJS)
+        "permalink" .RelPermalink
+        "externalUrl" .Params.externalUrl
+        "type" .Type
+      ) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- $index | jsonify -}}

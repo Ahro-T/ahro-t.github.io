@@ -4,8 +4,6 @@ autoSwitchAppearance = true
 
 enableSearch = true
 enableCodeCopy = true
-highlightCurrentMenuArea = true
-smartTOC = true
 
 mainSections = ["posts"]
 

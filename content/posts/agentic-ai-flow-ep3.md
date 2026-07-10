@@ -6,6 +6,7 @@ categories: ["AI"]
 tags: ["AI", "메모리", "LLMWiki", "Ontology", "에이전트"]
 series: ["에이전트 시스템 입문"]
 description: "좋은 시스템은 먼저 연속성을 확보하고, 그다음에 구조화를 한다. memory first, ontology second."
+summary: "좋은 시스템은 먼저 연속성을 확보하고, 그다음에 구조화를 한다. memory first, ontology second."
 ---
 
 ## 이 시리즈 읽는 순서

@@ -1,4 +1,6 @@
-{{ $toc := .TableOfContents | emojify }}
+{{- $desktopTOC := replace .TableOfContents `id="TableOfContents"` `id="TableOfContents-desktop" aria-label="페이지 목차"` -}}
+{{- $mobileTOC := replace .TableOfContents `id="TableOfContents"` `id="TableOfContents-mobile" aria-label="페이지 목차 (모바일)"` -}}
+
 <details
   open
   id="TOCView"
@@ -7,7 +9,7 @@
     {{ i18n "article.table_of_contents" }}
   </summary>
   <div class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
-    {{ replace $toc "id=\"TableOfContents\"" "id=\"TableOfContents-desktop\" data-toc=\"desktop\"" | safeHTML }}
+    {{ $desktopTOC | emojify | safeHTML }}
   </div>
 </details>
 
@@ -16,89 +18,6 @@
     {{ i18n "article.table_of_contents" }}
   </summary>
   <div class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
-    {{ replace $toc "id=\"TableOfContents\"" "id=\"TableOfContents-mobile\" data-toc=\"mobile\"" | safeHTML }}
+    {{ $mobileTOC | emojify | safeHTML }}
   </div>
 </details>
-
-{{ if .Site.Params.smartTOC }}
-<script>
-  (() => {
-    const scrollOffset = 0.33;
-    const collapseInactive = {{ if site.Params.smartTOCHideUnfocusedChildren }}true{{ else }}false{{ end }};
-    let isJumpingToAnchor = false;
-
-    const getActiveAnchorId = (anchors, tocIds) => {
-      const threshold = window.scrollY + window.innerHeight * scrollOffset;
-
-      if (isJumpingToAnchor) {
-        for (const anchor of anchors) {
-          if (!tocIds.has(anchor.id)) continue;
-          const top = anchor.getBoundingClientRect().top + window.scrollY;
-          if (Math.abs(window.scrollY - top) < 100) return anchor.id;
-        }
-      }
-
-      for (let index = anchors.length - 1; index >= 0; index -= 1) {
-        const anchor = anchors[index];
-        const top = anchor.getBoundingClientRect().top + window.scrollY;
-        if (top <= threshold && tocIds.has(anchor.id)) return anchor.id;
-      }
-
-      return anchors.find((anchor) => tocIds.has(anchor.id))?.id || "";
-    };
-
-    const initTOC = () => {
-      const anchors = [...document.querySelectorAll(".anchor")];
-      const configurations = [...document.querySelectorAll("[data-toc]")].map((toc) => {
-        const links = [...toc.querySelectorAll('a[href^="#"]')];
-        const tocIds = new Set(links.map((link) => link.getAttribute("href").slice(1)));
-
-        if (collapseInactive) {
-          toc.querySelectorAll("li ul").forEach((list) => { list.style.display = "none"; });
-        }
-
-        links.forEach((link) => {
-          link.addEventListener("click", () => { isJumpingToAnchor = true; });
-        });
-
-        return { toc, links, tocIds };
-      });
-
-      const update = () => {
-        configurations.forEach(({ toc, links, tocIds }) => {
-          const activeId = getActiveAnchorId(anchors, tocIds);
-          if (!activeId) return;
-
-          links.forEach((link) => {
-            const active = link.getAttribute("href") === `#${activeId}`;
-            link.classList.toggle("active", active);
-            if (collapseInactive) {
-              const list = link.closest("li")?.querySelector("ul");
-              if (list) list.style.display = active ? "" : "none";
-            }
-          });
-
-          if (collapseInactive) {
-            let element = toc.querySelector(`a[href="#${CSS.escape(activeId)}"]`);
-            while (element && element !== toc) {
-              if (element.tagName === "UL") element.style.display = "";
-              if (element.tagName === "LI") element.querySelector("ul")?.style.setProperty("display", "");
-              element = element.parentElement;
-            }
-          }
-        });
-      };
-
-      window.addEventListener("scroll", update, { passive: true });
-      window.addEventListener("hashchange", update, { passive: true });
-      update();
-    };
-
-    if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", initTOC, { once: true });
-    } else {
-      initTOC();
-    }
-  })();
-</script>
-{{ end }}
