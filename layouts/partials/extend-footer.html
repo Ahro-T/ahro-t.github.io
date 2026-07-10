@@ -1,0 +1,9 @@
+<script>
+  window.addEventListener("load", () => {
+    document.querySelectorAll(".copy-button").forEach((button) => {
+      button.setAttribute("type", "button");
+      button.setAttribute("aria-label", "코드 복사");
+      button.setAttribute("aria-live", "polite");
+    });
+  });
+</script>
