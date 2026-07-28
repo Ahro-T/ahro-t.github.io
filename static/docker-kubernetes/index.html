@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="6시간 Docker·Kubernetes 강의를 23개 학습 청크, 실습, 오개념 교정, 확인문제로 배우는 한국어 코스">
+    <meta name="theme-color" content="#07110f">
+    <title>Docker & Kubernetes — 23개 청크 완주 코스</title>
+    <link rel="icon" href="/favicon.png">
+    <link rel="stylesheet" href="./course.css">
+    <script>
+      (() => {
+        const saved = localStorage.getItem("ahro-course-theme");
+        const preferred = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        document.documentElement.dataset.theme = saved || preferred;
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#lesson">본문으로 건너뛰기</a>
+
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Ahro 블로그 홈">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span>AHRO LAB</span>
+      </a>
+      <nav class="header-actions" aria-label="페이지 도구">
+        <a href="/kubernetes/">Kubernetes Masterclass</a>
+        <button id="theme-toggle" class="icon-button" type="button" aria-label="색상 테마 전환">
+          <span aria-hidden="true">◐</span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="course-title">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> 6H VIDEO · 23 LEARNING CHUNKS</p>
+          <h1 id="course-title">Docker와 Kubernetes,<br><em>보는 강의</em>에서 <em>설명하는 실력</em>으로.</h1>
+          <p class="hero-description">
+            5시간 56분 원본 강의를 학습 질문, 한 문장 모델, 손으로 확인하는 실습,
+            오개념 교정, 통과 기준으로 다시 설계했습니다.
+          </p>
+          <div class="hero-actions">
+            <button id="start-button" class="primary-button" type="button">첫 청크 시작하기 <span>→</span></button>
+            <button id="continue-button" class="secondary-button" type="button">이어서 학습하기</button>
+          </div>
+          <dl class="hero-stats">
+            <div><dt>23</dt><dd>학습 청크</dd></div>
+            <div><dt>5:56</dt><dd>원본 영상</dd></div>
+            <div><dt>10–14h</dt><dd>권장 학습</dd></div>
+            <div><dt>100%</dt><dd>브라우저 진도 저장</dd></div>
+          </dl>
+        </div>
+        <aside class="hero-card" aria-label="코스 학습 흐름">
+          <p class="card-label">THE LEARNING LOOP</p>
+          <ol>
+            <li><span>01</span><div><strong>질문을 먼저 읽기</strong><small>답을 보기 전에 결과를 예상합니다.</small></div></li>
+            <li><span>02</span><div><strong>한 문장으로 연결하기</strong><small>객체 이름보다 책임을 기억합니다.</small></div></li>
+            <li><span>03</span><div><strong>직접 고장 내보기</strong><small>정상 화면보다 실패에서 원리를 찾습니다.</small></div></li>
+            <li><span>04</span><div><strong>화면을 닫고 설명하기</strong><small>통과 기준에 답하면 다음으로 갑니다.</small></div></li>
+          </ol>
+        </aside>
+      </section>
+
+      <section class="course-shell" aria-label="영상 학습 도구">
+        <aside class="course-index" aria-label="전체 청크">
+          <div class="index-head">
+            <div>
+              <p class="section-kicker">COURSE MAP</p>
+              <h2>전체 청크</h2>
+            </div>
+            <div id="progress-ring" class="progress-ring" aria-label="완료 진도">
+              <strong id="progress-percent">0%</strong>
+            </div>
+          </div>
+
+          <label class="search-box">
+            <span aria-hidden="true">⌕</span>
+            <span class="sr-only">청크 검색</span>
+            <input id="course-search" type="search" placeholder="개념이나 실습 검색">
+          </label>
+
+          <div class="filters" role="group" aria-label="청크 필터">
+            <button class="filter-chip is-active" type="button" data-filter="all">전체</button>
+            <button class="filter-chip" type="button" data-filter="docker">Docker</button>
+            <button class="filter-chip" type="button" data-filter="kubernetes">K8s 핵심</button>
+            <button class="filter-chip" type="button" data-filter="operations">운영</button>
+          </div>
+
+          <ol id="chunk-list" class="chunk-list"></ol>
+          <p id="empty-state" class="empty-state" hidden>검색 결과가 없습니다.</p>
+        </aside>
+
+        <div class="learning-stage">
+          <section class="video-card" aria-labelledby="now-playing-title">
+            <div class="video-frame">
+              <iframe
+                id="course-video"
+                title="Docker Containers and Kubernetes Fundamentals 영상"
+                src="https://www.youtube-nocookie.com/embed/kTp5xUtcalw?rel=0&modestbranding=1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <div class="now-playing">
+              <div>
+                <p class="section-kicker">NOW PLAYING · <span id="now-time">00:00:00</span></p>
+                <h2 id="now-playing-title">오리엔테이션과 실습 환경</h2>
+              </div>
+              <div class="video-actions">
+                <button id="previous-button" class="icon-button" type="button" aria-label="이전 청크">←</button>
+                <button id="next-button" class="icon-button" type="button" aria-label="다음 청크">→</button>
+                <a id="youtube-link" class="youtube-link" href="https://www.youtube.com/watch?v=kTp5xUtcalw" target="_blank" rel="noreferrer">YouTube에서 열기 ↗</a>
+              </div>
+            </div>
+          </section>
+
+          <article id="lesson" class="lesson-card" tabindex="-1" aria-labelledby="lesson-title">
+            <header class="lesson-header">
+              <div>
+                <p id="lesson-meta" class="lesson-meta">CHUNK 01 · FOUNDATION · 5분</p>
+                <h2 id="lesson-title">오리엔테이션과 실습 환경</h2>
+              </div>
+              <button id="complete-button" class="complete-button" type="button" aria-pressed="false">
+                <span class="checkmark" aria-hidden="true">✓</span>
+                <span class="complete-label">완료 표시</span>
+              </button>
+            </header>
+
+            <section class="question-panel">
+              <p class="panel-label">먼저 답해보세요</p>
+              <h3 id="lesson-question"></h3>
+            </section>
+
+            <section class="model-panel">
+              <p class="panel-label">한 문장 모델</p>
+              <blockquote id="lesson-model"></blockquote>
+            </section>
+
+            <div class="lesson-grid">
+              <section class="content-panel">
+                <div class="panel-icon concept-icon" aria-hidden="true">01</div>
+                <p class="panel-label">핵심 내용</p>
+                <h3>머릿속 구조 잡기</h3>
+                <p id="lesson-core" class="preserve-lines"></p>
+              </section>
+              <section class="content-panel">
+                <div class="panel-icon lab-icon" aria-hidden="true">02</div>
+                <p class="panel-label">손으로 확인</p>
+                <h3>결과를 직접 관찰하기</h3>
+                <p id="lesson-lab" class="preserve-lines"></p>
+              </section>
+              <section class="content-panel warning-panel">
+                <div class="panel-icon warning-icon" aria-hidden="true">!</div>
+                <p class="panel-label">자주 틀리는 지점</p>
+                <h3>이 오개념을 버리세요</h3>
+                <p id="lesson-misconception" class="preserve-lines"></p>
+              </section>
+              <section class="content-panel check-panel">
+                <div class="panel-icon check-icon" aria-hidden="true">✓</div>
+                <p class="panel-label">통과 기준</p>
+                <h3>화면을 닫고 설명하기</h3>
+                <p id="lesson-check" class="preserve-lines"></p>
+              </section>
+            </div>
+
+            <section class="notes-panel">
+              <div>
+                <p class="panel-label">MY NOTES</p>
+                <h3>내 언어로 다시 쓰기</h3>
+              </div>
+              <label>
+                <span class="sr-only">현재 청크 학습 노트</span>
+                <textarea id="lesson-notes" rows="5" placeholder="예: Image는 실행 템플릿이고 Container는 실행 인스턴스다."></textarea>
+              </label>
+              <p id="note-status" class="note-status" aria-live="polite">자동 저장됩니다.</p>
+            </section>
+
+            <footer class="lesson-footer">
+              <button id="footer-previous" class="secondary-button" type="button">← 이전 청크</button>
+              <button id="footer-next" class="primary-button" type="button">다음 청크 <span>→</span></button>
+            </footer>
+          </article>
+        </div>
+      </section>
+
+      <section class="principles" aria-labelledby="principles-title">
+        <p class="section-kicker">WHY THIS COURSE WORKS</p>
+        <h2 id="principles-title">명령어보다 오래 남는 네 가지 기준</h2>
+        <div class="principle-grid">
+          <article><span>01</span><h3>문제가 먼저</h3><p>객체 이름을 배우기 전에 없으면 생기는 불편부터 이해합니다.</p></article>
+          <article><span>02</span><h3>책임을 분리</h3><p>Docker Engine, Controller, Service가 각각 무엇을 관리하는지 구분합니다.</p></article>
+          <article><span>03</span><h3>실패를 관찰</h3><p>STATUS, Events, Logs, Endpoints를 증거로 원인을 좁힙니다.</p></article>
+          <article><span>04</span><h3>설명으로 통과</h3><p>복사한 명령이 아니라 시스템의 동작을 자기 말로 설명합니다.</p></article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Docker & Kubernetes Fundamentals</strong>
+        <p>원본 영상과 공식 실습 자료를 바탕으로 재구성한 한국어 학습 가이드입니다.</p>
+      </div>
+      <nav aria-label="참고 자료">
+        <a href="https://www.youtube.com/watch?v=kTp5xUtcalw" target="_blank" rel="noreferrer">원본 강의 ↗</a>
+        <a href="https://github.com/K8sAcademy/Fundamentals-HandsOn" target="_blank" rel="noreferrer">실습 저장소 ↗</a>
+        <a href="/" >Ahro's Blog</a>
+      </nav>
+    </footer>
+
+    <noscript>
+      <p class="noscript">이 학습 페이지의 진도 저장과 청크 탐색에는 JavaScript가 필요합니다.</p>
+    </noscript>
+    <script src="./course.js" defer></script>
+  </body>
+</html>
