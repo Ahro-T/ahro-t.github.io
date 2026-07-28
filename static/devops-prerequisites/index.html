@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="freeCodeCamp DevOps Prerequisites 한국어 텍스트 강의"><title>DevOps 기초 선수지식</title><link rel="stylesheet" href="./course.css"></head>
+<body>
+<header class="topbar"><button id="menuToggle" class="icon-button" aria-label="메뉴 열기">☰</button><a class="brand" href="#home">DevOps 기초 선수지식</a><div class="top-actions"><a href="https://www.youtube.com/watch?v=Wvf0mBNGjXY" target="_blank" rel="noopener">원본 영상</a><a href="https://github.com/Ahro-T/ahro-t.github.io" target="_blank" rel="noopener">GitHub</a><button id="themeToggle" class="icon-button" aria-label="테마 전환">◐</button></div></header>
+<div class="layout"><aside id="sidebar" class="sidebar"><div class="search-wrap"><label for="searchInput">강의 검색</label><input id="searchInput" type="search" placeholder="예: Vagrant, DNS, YAML"><div id="searchResults" class="search-results"></div></div><nav class="course-nav" aria-label="강의 목차">
+<button id="nav-home" class="nav-item" data-target="home">홈</button><button id="nav-overview" class="nav-item" data-target="overview">강의 개요</button><button id="nav-timeline" class="nav-item" data-target="timeline">전체 타임라인</button>
+<button id="nav-chapter-01" class="nav-item" data-target="chapter-01">01. 강의 소개</button><button id="nav-chapter-02" class="nav-item" data-target="chapter-02">02. Linux CLI</button><button id="nav-chapter-03" class="nav-item" data-target="chapter-03">03. 패키지·서비스·VI</button><button id="nav-chapter-04" class="nav-item" data-target="chapter-04">04. VirtualBox 설치</button><button id="nav-chapter-05" class="nav-item" data-target="chapter-05">05. VM 연결과 SSH</button><button id="nav-chapter-06" class="nav-item" data-target="chapter-06">06. 가상 네트워킹</button><button id="nav-chapter-07" class="nav-item" data-target="chapter-07">07. Vagrant</button><button id="nav-chapter-08" class="nav-item" data-target="chapter-08">08. DNS</button><button id="nav-chapter-09" class="nav-item" data-target="chapter-09">09. 스위칭과 라우팅</button><button id="nav-chapter-10" class="nav-item" data-target="chapter-10">10. IP와 포트</button><button id="nav-chapter-11" class="nav-item" data-target="chapter-11">11. YAML과 정리</button><button id="nav-references" class="nav-item" data-target="references">출처와 주의사항</button></nav><div class="progress-card"><div><strong>학습 진행률</strong><span id="progressText">0%</span></div><progress id="progressBar" max="11" value="0"></progress><button id="markComplete" class="complete-button">현재 챕터 완료</button></div></aside>
+<main id="content" class="content">
+<article class="course-page" data-page="home"><h1>DevOps 기초 선수지식</h1><p>freeCodeCamp의 <strong>DevOps Prerequisites Course</strong> 영상을 처음부터 끝까지 학습할 수 있도록 한국어로 재구성한 강의입니다.</p><blockquote><strong>원본 영상</strong><br><a href="https://www.youtube.com/watch?v=Wvf0mBNGjXY" target="_blank" rel="noopener">YouTube에서 강의 보기</a></blockquote><h2>강의 정보</h2><ul><li>분량: 약 2시간 43분</li><li>대상: DevOps 입문자와 개발 경험이 있는 초급자</li><li>주제: Linux, VirtualBox, Vagrant, DNS, 라우팅, IP·포트, YAML</li><li>학습 방식: 설명 읽기 → 타임스탬프 영상 확인 → 명령 직접 실행 → 이해도 점검</li></ul><h2>이 강의에서 배우는 것</h2><ol><li>Linux 셸에서 파일과 프로세스를 다루는 기본 명령</li><li>가상 머신을 만들고 SSH로 접속하는 과정</li><li>Vagrant로 반복 가능한 VM 환경을 정의하는 방법</li><li>DNS, 스위치, 라우터, IP 주소와 포트의 관계</li><li>YAML 문법과 DevOps 구성 파일의 읽는 법</li></ol><h2>시작 전 준비</h2><p>터미널을 사용할 수 있는 컴퓨터와 VirtualBox·Vagrant를 설치할 권한이 필요합니다. 운영체제와 제품 버전에 따라 UI나 명령 결과가 영상과 다를 수 있습니다.</p></article>
+<article class="course-page" data-page="overview"><h1>강의 개요</h1><h2>학습 경로</h2><table><thead><tr><th>Part</th><th>핵심 주제</th><th>결과</th></tr></thead><tbody><tr><td>1</td><td>Linux 기본기</td><td>터미널에서 파일·패키지·서비스 조작</td></tr><tr><td>2</td><td>가상화</td><td>VirtualBox VM 생성과 네트워크 연결</td></tr><tr><td>3</td><td>자동화</td><td>Vagrantfile로 VM 재현</td></tr><tr><td>4</td><td>네트워킹</td><td>DNS·라우팅·IP·포트 흐름 설명</td></tr><tr><td>5</td><td>구성 데이터</td><td>YAML 파일 읽기와 작성</td></tr></tbody></table><h2>권장 학습 방식</h2><ol><li>각 챕터의 개념을 먼저 읽습니다.</li><li>제시된 타임스탬프에서 원본 설명과 화면을 확인합니다.</li><li>명령은 복사만 하지 말고 직접 입력합니다.</li><li>실행 결과가 다른 경우 운영체제·버전·권한을 점검합니다.</li><li>챕터를 마치면 왼쪽의 완료 버튼을 누릅니다.</li></ol></article>
+<article class="course-page" data-page="timeline"><h1>전체 강의 타임라인</h1><table><thead><tr><th>시작</th><th>주제</th></tr></thead><tbody><tr><td><a href="https://www.youtube.com/watch?v=Wvf0mBNGjXY&t=0s" target="_blank">00:00</a></td><td>강의 소개</td></tr><tr><td><a href="https://www.youtube.com/watch?v=Wvf0mBNGjXY&t=206s" target="_blank">03:26</a></td><td>Linux 기본 명령</td></tr><tr><td><a href="https://www.youtube.com/watch?v=Wvf0mBNGjXY&t=1430s" target="_blank">23:50</a></td><td>패키지와 서비스</td></tr><tr><td><a href="https://www.youtube.com/watch?v=Wvf0mBNGjXY&t=2520s" target="_blank">42:00</a></td><td>VirtualBox 설치와 VM</td></tr><tr><td><a href="https://www.youtube.com/watch?v=Wvf0mBNGjXY&t=4100s" target="_blank">01:08:20</a></td><td>VM 네트워크</td></tr><tr><td><a href="https://www.youtube.com/watch?v=Wvf0mBNGjXY&t=5400s" target="_blank">01:30:00</a></td><td>Vagrant</td></tr><tr><td><a href="https://www.youtube.com/watch?v=Wvf0mBNGjXY&t=7200s" target="_blank">02:00:00</a></td><td>DNS</td></tr><tr><td><a href="https://www.youtube.com/watch?v=Wvf0mBNGjXY&t=8100s" target="_blank">02:15:00</a></td><td>스위칭과 라우팅</td></tr><tr><td><a href="https://www.youtube.com/watch?v=Wvf0mBNGjXY&t=9000s" target="_blank">02:30:00</a></td><td>IP·포트·YAML</td></tr></tbody></table><blockquote>세부 경계는 영상 재생 환경에 따라 몇 초 차이가 날 수 있습니다.</blockquote></article>
+<article class="course-page" data-page="chapter-01"><h1>01. 강의 소개</h1><p><strong>영상 구간:</strong> <a href="https://www.youtube.com/watch?v=Wvf0mBNGjXY&t=0s" target="_blank">00:00부터 보기</a></p><h2>학습 목표</h2><ul><li>DevOps 입문 전에 필요한 기술 범위를 설명한다.</li><li>Linux·가상화·네트워크·YAML이 이후 도구와 어떻게 연결되는지 이해한다.</li></ul><h2>핵심 개념</h2><p>DevOps는 특정 제품 하나가 아니라 개발과 운영의 전달 과정을 자동화하고 반복 가능하게 만드는 실천 방식입니다. Docker나 Kubernetes를 먼저 외우기보다 운영체제, 네트워크, 구성 파일의 기본 모델을 알아야 장애 상황에서 원인을 추적할 수 있습니다.</p><h2>실습</h2><pre><code>uname -a
+whoami
+pwd</code></pre><p>현재 운영체제, 사용자, 작업 디렉터리를 기록합니다.</p><h2>확인 질문</h2><details><summary>왜 Linux와 네트워크를 먼저 배우나요?</summary><p>대부분의 서버 도구가 Linux 프로세스와 네트워크 위에서 동작하기 때문에, 상위 도구의 오류를 하위 계층에서 진단하려면 기본 모델이 필요합니다.</p></details></article>
+<article class="course-page" data-page="chapter-02"><h1>02. Linux CLI</h1><p><strong>영상:</strong> <a href="https://www.youtube.com/watch?v=Wvf0mBNGjXY&t=206s" target="_blank">Linux 구간 보기</a></p><h2>핵심 개념</h2><p>셸은 명령을 해석해 운영체제에 전달합니다. 경로는 절대 경로와 상대 경로로 구분하며, 명령은 현재 작업 디렉터리와 권한의 영향을 받습니다.</p><h2>기본 명령</h2><pre><code>pwd
+ls -la
+cd /tmp
+mkdir devops-lab
+cd devops-lab
+touch notes.txt
+cp notes.txt notes-copy.txt
+mv notes-copy.txt archive.txt
+rm archive.txt</code></pre><h2>파일 읽기와 검색</h2><pre><code>cat /etc/os-release
+head -n 5 /etc/passwd
+tail -n 20 /var/log/syslog
+grep -i "error" application.log
+find . -name "*.yaml"</code></pre><blockquote><strong>주의</strong><br><code>rm</code>은 휴지통을 거치지 않습니다. 경로와 와일드카드를 실행 전에 확인하세요.</blockquote><h2>과제</h2><p><code>~/devops-lab</code>에 폴더 세 개와 텍스트 파일을 만들고, 상대 경로만 사용해 복사·이동·삭제해 보세요.</p></article>
+<article class="course-page" data-page="chapter-03"><h1>03. 패키지·서비스·VI</h1><p><strong>영상:</strong> <a href="https://www.youtube.com/watch?v=Wvf0mBNGjXY&t=1430s" target="_blank">패키지 구간 보기</a></p><h2>패키지 관리자</h2><p>패키지 관리자는 저장소에서 소프트웨어와 의존성을 설치하고 업데이트합니다. 배포판마다 도구가 다릅니다.</p><pre><code># Debian/Ubuntu
+sudo apt update
+sudo apt install nginx
+
+# RHEL 계열
+sudo yum install nginx</code></pre><h2>서비스 관리</h2><pre><code>sudo systemctl status nginx
+sudo systemctl start nginx
+sudo systemctl enable nginx
+journalctl -u nginx --since today</code></pre><h2>VI 최소 사용법</h2><ul><li><code>i</code>: 입력 모드</li><li><code>Esc</code>: 명령 모드</li><li><code>:w</code>: 저장</li><li><code>:q</code>: 종료</li><li><code>:wq</code>: 저장 후 종료</li><li><code>:q!</code>: 변경 폐기</li></ul><h2>오류 점검 순서</h2><ol><li>서비스 상태</li><li>최근 로그</li><li>설정 문법</li><li>포트 점유</li><li>파일 권한</li></ol></article>
+<article class="course-page" data-page="chapter-04"><h1>04. VirtualBox 설치</h1><p><strong>영상:</strong> <a href="https://www.youtube.com/watch?v=Wvf0mBNGjXY&t=2520s" target="_blank">VirtualBox 구간 보기</a></p><h2>가상화 모델</h2><p>하이퍼바이저는 물리 컴퓨터의 CPU·메모리·디스크·네트워크 자원을 여러 가상 머신에 나눠 제공합니다. 각 VM은 자체 운영체제와 커널을 가집니다.</p><h2>VM 생성 체크리스트</h2><ul><li>호스트 CPU 가상화 기능 활성화</li><li>충분한 메모리와 디스크 확보</li><li>운영체제 ISO 선택</li><li>부팅 순서와 네트워크 어댑터 확인</li><li>설치 후 Guest Additions 필요 여부 확인</li></ul><blockquote><strong>흔한 문제</strong><br>64비트 게스트가 표시되지 않거나 VM이 시작되지 않으면 BIOS/UEFI 가상화 설정과 다른 하이퍼바이저 충돌을 점검합니다.</blockquote></article>
+<article class="course-page" data-page="chapter-05"><h1>05. VM 연결과 SSH</h1><p><strong>영상:</strong> <a href="https://www.youtube.com/watch?v=Wvf0mBNGjXY&t=3600s" target="_blank">연결 구간 보기</a></p><h2>SSH의 역할</h2><p>SSH는 암호화된 원격 셸을 제공합니다. 접속에는 대상 IP, 사용자, 인증 방식, SSH 서버 상태, 네트워크 경로가 모두 필요합니다.</p><pre><code>ip addr
+ip route
+ss -lntp | grep :22
+ssh user@192.168.56.10
+ssh -i ~/.ssh/id_ed25519 user@192.168.56.10</code></pre><h2>접속 실패 진단</h2><ol><li>VM이 실행 중인가?</li><li>IP 주소가 맞는가?</li><li>호스트에서 대상 IP에 도달 가능한가?</li><li>22번 포트가 열려 있는가?</li><li>사용자와 키 권한이 올바른가?</li></ol><pre><code>ping -c 3 192.168.56.10
+nc -vz 192.168.56.10 22
+ssh -vvv user@192.168.56.10</code></pre></article>
+<article class="course-page" data-page="chapter-06"><h1>06. VirtualBox 네트워킹</h1><p><strong>영상:</strong> <a href="https://www.youtube.com/watch?v=Wvf0mBNGjXY&t=4100s" target="_blank">네트워크 구간 보기</a></p><h2>어댑터 모드</h2><table><thead><tr><th>모드</th><th>특징</th><th>용도</th></tr></thead><tbody><tr><td>NAT</td><td>게스트가 외부로 나가기 쉬움</td><td>일반 인터넷 접근</td></tr><tr><td>Bridged</td><td>게스트가 실제 LAN의 장치처럼 동작</td><td>다른 장치에서 직접 접근</td></tr><tr><td>Host-only</td><td>호스트와 게스트 전용 네트워크</td><td>격리된 실습</td></tr><tr><td>Internal</td><td>VM끼리만 통신</td><td>완전 격리된 다중 VM</td></tr></tbody></table><h2>권장 실습</h2><p>어댑터 1은 NAT, 어댑터 2는 Host-only로 구성하면 인터넷 접근과 호스트-게스트 SSH를 동시에 실습하기 쉽습니다.</p><pre><code>ip addr
+ip route
+ping -c 3 8.8.8.8
+getent hosts example.com</code></pre></article>
+<article class="course-page" data-page="chapter-07"><h1>07. Vagrant</h1><p><strong>영상:</strong> <a href="https://www.youtube.com/watch?v=Wvf0mBNGjXY&t=5400s" target="_blank">Vagrant 구간 보기</a></p><h2>왜 필요한가</h2><p>GUI로 VM을 수동 생성하면 설정이 사람의 기억에 남습니다. Vagrantfile은 베이스 이미지, 자원, 네트워크와 프로비저닝을 코드로 기록해 같은 환경을 다시 만들 수 있게 합니다.</p><h2>기본 흐름</h2><pre><code>mkdir vagrant-lab && cd vagrant-lab
+vagrant init ubuntu/jammy64
+vagrant up
+vagrant status
+vagrant ssh
+vagrant halt
+vagrant destroy -f</code></pre><h2>Vagrantfile 예시</h2><pre><code>Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/jammy64"
+  config.vm.network "private_network", ip: "192.168.56.20"
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = 2048
+    vb.cpus = 2
+  end
+end</code></pre><blockquote><strong>버전 주의</strong><br>Box 이름과 VirtualBox 호환성은 시점에 따라 달라질 수 있습니다. 오류가 나면 공식 Vagrant Cloud의 현재 box 정보를 확인하세요.</blockquote></article>
+<article class="course-page" data-page="chapter-08"><h1>08. DNS</h1><p><strong>영상:</strong> <a href="https://www.youtube.com/watch?v=Wvf0mBNGjXY&t=7200s" target="_blank">DNS 구간 보기</a></p><h2>이름 해석 과정</h2><p>애플리케이션은 도메인 이름을 IP 주소로 바꾼 뒤 네트워크 연결을 시작합니다. 로컬 hosts 파일, 캐시, 재귀 DNS 서버, 권한 서버가 이 과정에 관여할 수 있습니다.</p><pre><code>cat /etc/hosts
+cat /etc/resolv.conf
+getent hosts example.com
+nslookup example.com
+dig example.com A</code></pre><h2>주요 레코드</h2><ul><li><strong>A</strong>: 이름 → IPv4</li><li><strong>AAAA</strong>: 이름 → IPv6</li><li><strong>CNAME</strong>: 별칭 → 정식 이름</li><li><strong>MX</strong>: 메일 서버</li><li><strong>TXT</strong>: 검증·정책 텍스트</li></ul><h2>오해</h2><p>DNS 조회 성공은 서비스가 정상이라는 뜻이 아닙니다. 이름 해석 후에도 라우팅, 방화벽, 포트, 애플리케이션 상태를 별도로 확인해야 합니다.</p></article>
+<article class="course-page" data-page="chapter-09"><h1>09. 스위칭과 라우팅</h1><p><strong>영상:</strong> <a href="https://www.youtube.com/watch?v=Wvf0mBNGjXY&t=8100s" target="_blank">라우팅 구간 보기</a></p><h2>같은 네트워크와 다른 네트워크</h2><p>같은 서브넷의 장치는 링크 계층에서 직접 통신합니다. 다른 서브넷으로 가는 패킷은 라우팅 테이블이 선택한 게이트웨이로 전달됩니다.</p><pre><code>ip link
+ip addr
+ip route
+ip neigh
+traceroute example.com</code></pre><h2>라우팅 테이블 읽기</h2><pre><code>default via 192.168.1.1 dev eth0
+192.168.1.0/24 dev eth0 proto kernel scope link</code></pre><p>첫 줄은 더 구체적인 경로가 없을 때 사용하는 기본 게이트웨이입니다. 둘째 줄은 로컬 인터페이스에 직접 연결된 네트워크입니다.</p><h2>진단 질문</h2><ol><li>목적지와 같은 서브넷인가?</li><li>어떤 인터페이스와 게이트웨이가 선택되는가?</li><li>게이트웨이의 MAC 주소를 해석했는가?</li><li>중간 라우터나 방화벽이 패킷을 허용하는가?</li></ol></article>
+<article class="course-page" data-page="chapter-10"><h1>10. IP 주소와 포트</h1><p><strong>영상:</strong> <a href="https://www.youtube.com/watch?v=Wvf0mBNGjXY&t=8800s" target="_blank">IP와 포트 구간 보기</a></p><h2>주소와 프로세스</h2><p>IP 주소는 네트워크 인터페이스를 식별하고, 포트는 호스트 안에서 통신 대상 프로세스를 구분합니다. 서버가 포트에서 대기해야 클라이언트가 연결할 수 있습니다.</p><pre><code>ss -lntp
+ss -lunp
+curl -v http://127.0.0.1:8080
+nc -vz 127.0.0.1 8080</code></pre><h2>바인딩 주소</h2><ul><li><code>127.0.0.1</code>: 같은 호스트에서만 접근</li><li><code>0.0.0.0</code>: 모든 IPv4 인터페이스에서 대기</li><li>특정 IP: 해당 인터페이스에서만 대기</li></ul><blockquote><strong>보안</strong><br>모든 인터페이스에 바인딩하는 것은 접근 가능 범위를 넓힙니다. 방화벽과 인증을 함께 고려해야 합니다.</blockquote></article>
+<article class="course-page" data-page="chapter-11"><h1>11. YAML과 정리</h1><p><strong>영상:</strong> <a href="https://www.youtube.com/watch?v=Wvf0mBNGjXY&t=9300s" target="_blank">YAML 구간 보기</a></p><h2>기본 자료형</h2><pre><code>name: web
+replicas: 3
+enabled: true
+ports:
+  - 80
+  - 443
+metadata:
+  owner: platform-team
+  environment: dev</code></pre><h2>문법 규칙</h2><ul><li>들여쓰기는 구조이며 탭 대신 공백을 사용합니다.</li><li><code>key: value</code>는 매핑입니다.</li><li><code>- item</code>은 목록입니다.</li><li>문자열처럼 보이는 숫자·날짜·불리언은 따옴표가 필요할 수 있습니다.</li><li>같은 레벨의 들여쓰기는 반드시 일치해야 합니다.</li></ul><h2>검증 예제</h2><pre><code>python -c "import yaml; print(yaml.safe_load(open('sample.yaml')))"</code></pre><h2>최종 과제</h2><p>Vagrant VM을 만들고 SSH로 접속한 뒤, 네트워크와 DNS를 점검하고 YAML 파일을 작성해 보세요. 각 단계의 명령과 결과를 README에 기록하면 재현 가능한 실습 문서가 됩니다.</p></article>
+<article class="course-page" data-page="references"><h1>출처와 주의사항</h1><h2>원본 강의</h2><ul><li>제작 채널: freeCodeCamp.org</li><li>영상: <a href="https://www.youtube.com/watch?v=Wvf0mBNGjXY" target="_blank" rel="noopener">DevOps Prerequisites Course</a></li><li>확인일: 2026-07-28</li></ul><h2>제작 원칙</h2><p>이 페이지는 원본 강의를 대체하는 전사본이 아니라 학습을 돕기 위해 자체 문장으로 재구성한 보조 자료입니다. 정확한 시연 화면과 전체 맥락은 원본 영상을 확인하세요.</p><h2>확인이 필요한 사항</h2><ul><li>제품 UI와 설치 방식은 현재 버전에서 달라질 수 있습니다.</li><li>영상 프레임은 저작권과 실행 환경 제약으로 직접 포함하지 않았습니다.</li><li>타임스탬프는 챕터 진입용이며 몇 초의 오차가 있을 수 있습니다.</li></ul></article>
+<footer class="page-footer"><button id="prevPage">← 이전</button><span id="pageCounter"></span><button id="nextPage">다음 →</button></footer></main></div>
+<script>window.COURSE_SEARCH_INDEX=[
+{id:'home',title:'홈',text:'DevOps 선수지식 Linux VirtualBox Vagrant DNS 라우팅 YAML'},
+{id:'overview',title:'강의 개요',text:'학습 경로 Linux 가상화 자동화 네트워킹 구성 데이터'},
+{id:'timeline',title:'전체 타임라인',text:'영상 시간 챕터 순서'},
+{id:'chapter-01',title:'강의 소개',text:'DevOps 입문 운영체제 네트워크 구성 파일'},
+{id:'chapter-02',title:'Linux CLI',text:'pwd ls cd mkdir touch cp mv rm cat grep find'},
+{id:'chapter-03',title:'패키지 서비스 VI',text:'apt yum systemctl journalctl vi vim'},
+{id:'chapter-04',title:'VirtualBox 설치',text:'가상화 하이퍼바이저 VM ISO'},
+{id:'chapter-05',title:'VM 연결과 SSH',text:'ssh ip addr ping nc 포트 22'},
+{id:'chapter-06',title:'VirtualBox 네트워킹',text:'NAT Bridged Host-only Internal adapter'},
+{id:'chapter-07',title:'Vagrant',text:'Vagrantfile box up ssh halt destroy 자동화'},
+{id:'chapter-08',title:'DNS',text:'hosts resolv.conf dig nslookup A AAAA CNAME MX'},
+{id:'chapter-09',title:'스위칭과 라우팅',text:'switch route gateway subnet ip route neigh traceroute'},
+{id:'chapter-10',title:'IP 주소와 포트',text:'IP TCP UDP port bind ss curl nc'},
+{id:'chapter-11',title:'YAML과 정리',text:'YAML mapping list indentation boolean configuration'},
+{id:'references',title:'출처와 주의사항',text:'freeCodeCamp 원본 영상 저작권'}];</script><script src="./course.js" defer></script></body></html>
