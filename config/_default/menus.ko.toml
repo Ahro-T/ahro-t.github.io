@@ -14,16 +14,21 @@
   weight = 3
 
 [[main]]
+  name = "DevOps 기초 강의"
+  url = "/devops-prerequisites/"
+  weight = 4
+
+[[main]]
   name = "아카이브"
   pageRef = "archives"
-  weight = 4
+  weight = 5
 
 [[main]]
   name = "카테고리"
   pageRef = "categories"
-  weight = 5
+  weight = 6
 
 [[main]]
   name = "소개"
   pageRef = "about"
-  weight = 6
+  weight = 7
